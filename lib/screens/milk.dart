@@ -1,3 +1,6 @@
+import 'package:essential_services/item.dart';
+import 'package:essential_services/screen_config.dart';
+import 'package:essential_services/shop.dart';
 import 'package:flutter/material.dart';
 
 class Milk extends StatefulWidget {
@@ -7,85 +10,47 @@ class Milk extends StatefulWidget {
   _MilkState createState() => _MilkState();
 }
 
-class Item {
-  Item({this.isExpanded = false, this.headerValue, this.expandedValue});
-
-  bool isExpanded;
-  Widget expandedValue;
-  String headerValue;
-}
-
-class CustomTextStyle {
-  static var textSize = TextStyle(fontSize: 30.0,fontWeight: FontWeight.normal);
-}
-
 class _MilkState extends State<Milk> {
-
   List<Item> _items = <Item>[
     Item(
         headerValue: 'Shop 1',
-        expandedValue: Column(
-          children: <Widget>[
-            Text(
-              'Time: 9:00 AM to 8:00 PM',
-              style: CustomTextStyle.textSize,
-            ),
-            Text(
-              'Rate: Rs. 100',
-              style: CustomTextStyle.textSize,
-            ),
-            Text(
-              'Location: ABC',
-              style: CustomTextStyle.textSize,
-            )
-          ],
-        )),
+        shop: Shop(
+            location: 'Uran Market',
+            rate: 'Rs. 100',
+            time: '10:00 PM to 7:00 PM')),
     Item(
         headerValue: 'Shop 2',
-        expandedValue: Column(
-          children: <Widget>[
-            Text(
-              'Time: 9:00 AM to 8:00 PM',
-              style: CustomTextStyle.textSize,
-            ),
-            Text(
-              'Rate: Rs. 100',
-              style: CustomTextStyle.textSize,
-            ),
-            Text(
-              'Location: ABC',
-              style: CustomTextStyle.textSize,
-            )
-          ],
-        )),
+        shop: Shop(
+            location: 'Uran Market',
+            rate: 'Rs. 200',
+            time: '10:00 PM to 7:00 PM')),
     Item(
         headerValue: 'Shop 3',
-        expandedValue: Column(
-          children: <Widget>[
-            Text(
-              'Time: 9:00 AM to 8:00 PM',
-              style: CustomTextStyle.textSize,
-            ),
-            Text(
-              'Rate: Rs. 100',
-              style: CustomTextStyle.textSize,
-            ),
-            Text(
-              'Location: ABC',
-              style: CustomTextStyle.textSize,
-            )
-          ],
-        ))
+        shop: Shop(
+            location: 'Uran Market',
+            rate: 'Rs. 150',
+            time: '10:00 PM to 7:00 PM')),
   ];
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+    Color headerColor;
+
     return Scaffold(
-      appBar: AppBar(title: Text('Milk'),),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          'Milk',
+          style: TextStyle(
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       body: ListView(
         children: <Widget>[
           ExpansionPanelList(
-              expandedHeaderPadding: EdgeInsets.zero,
               expansionCallback: (int index, bool isExpanded) {
                 setState(() {
                   _items[index].isExpanded = !_items[index].isExpanded;
@@ -93,19 +58,25 @@ class _MilkState extends State<Milk> {
               },
               children: _items.map<ExpansionPanel>((Item item) {
                 return ExpansionPanel(
+                    canTapOnHeader: true,
                     headerBuilder: (BuildContext context, bool isExpanded) {
-                      return Text(
-                        item.headerValue,
-                        style: TextStyle(
-                          fontSize: 30.0,
+                      headerColor = isExpanded ? Colors.blue : Colors.black;
+                      return Container(
+                        padding: EdgeInsets.only(top: 8.0),
+                        child: Text(
+                          item.headerValue,
+                          style: TextStyle(
+                            fontSize: 30.0,
+                            color: headerColor,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
                       );
                     },
                     isExpanded: item.isExpanded,
                     body: Container(
-                      child: item.expandedValue,
-                      padding: EdgeInsets.all(8.0),
+                      child: item.rowBuilder(context),
+                      padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 10.0),
                     ));
               }).toList())
         ],

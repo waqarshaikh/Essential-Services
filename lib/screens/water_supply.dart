@@ -4,14 +4,14 @@ import 'package:essential_services/shop.dart';
 import 'package:flutter/material.dart';
 import 'package:essential_services/expantion_panel_bulder.dart';
 
-class Chicken extends StatefulWidget {
-  Chicken({Key key}) : super(key: key);
+class WaterSupply extends StatefulWidget {
+  WaterSupply({Key key}) : super(key: key);
 
   @override
-  _ChickenState createState() => _ChickenState();
+  _WaterSupplyState createState() => _WaterSupplyState();
 }
 
-class _ChickenState extends State<Chicken> {
+class _WaterSupplyState extends State<WaterSupply> {
   List<Item> _items = <Item>[
     Item(
         headerValue: 'Shop 1 (Location)',
@@ -42,7 +42,7 @@ class _ChickenState extends State<Chicken> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Chicken',
+          'Water Supply',
           style: TextStyle(
             fontSize: 30.0,
             fontWeight: FontWeight.bold,

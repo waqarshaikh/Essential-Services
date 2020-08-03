@@ -4,29 +4,29 @@ import 'package:essential_services/shop.dart';
 import 'package:flutter/material.dart';
 import 'package:essential_services/expantion_panel_bulder.dart';
 
-class Chicken extends StatefulWidget {
-  Chicken({Key key}) : super(key: key);
+class Restaurant extends StatefulWidget {
+  Restaurant({Key key}) : super(key: key);
 
   @override
-  _ChickenState createState() => _ChickenState();
+  _RestaurantState createState() => _RestaurantState();
 }
 
-class _ChickenState extends State<Chicken> {
+class _RestaurantState extends State<Restaurant> {
   List<Item> _items = <Item>[
     Item(
-        headerValue: 'Shop 1 (Location)',
+        headerValue: 'Restaurant 1 (Location)',
         shop: Shop(
             location: 'Uran Market',
             rate: 'Rs. 100',
             time: '10:00 PM to 7:00 PM')),
     Item(
-        headerValue: 'Shop 2 (Location)',
+        headerValue: 'Restaurant 2 (Location)',
         shop: Shop(
             location: 'Uran Market',
             rate: 'Rs. 200',
             time: '10:00 PM to 7:00 PM')),
     Item(
-        headerValue: 'Shop 3 (Location)',
+        headerValue: 'Restaurant 3 (Location)',
         shop: Shop(
             location: 'Uran Market',
             rate: 'Rs. 150',
@@ -42,7 +42,7 @@ class _ChickenState extends State<Chicken> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Chicken',
+          'Restaurant',
           style: TextStyle(
             fontSize: 30.0,
             fontWeight: FontWeight.bold,
