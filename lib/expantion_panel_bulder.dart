@@ -24,9 +24,6 @@ class ExpantionPanelBuilder {
           );
         },
         isExpanded: item.isExpanded,
-        body: Container(
-          child: item.rowBuilder(context),
-          padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 10.0),
-        ));
+        body:  item.rowBuilder(context),);
   }
 }

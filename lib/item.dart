@@ -10,27 +10,92 @@ class Item {
   String headerValue;
 
   Widget rowBuilder(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Column(
       children: <Widget>[
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            customText(text: 'Time: ', context: context),
-            customText(text: 'Rate: ', context: context),
-            customText(text: 'Location: ', context: context),
-          ],
+        Card(
+          child: ListTile(
+            leading: Image(
+              image: AssetImage('lib/assets/images/wall-clock.png'),
+              height: 35.0,
+              width: 35.0,
+            ),
+            title: customText(text: 'Time: ', context: context),
+            subtitle: customText(text: shop.time, context: context),
+          ),
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            customText(text: shop.time, context: context),
-            customText(text: shop.rate, context: context),
-            customText(text: shop.location, context: context),
-          ],
+        Card(
+          child: ListTile(
+            leading: Image(
+              image: AssetImage('lib/assets/images/pin.png'),
+              height: 35.0,
+              width: 35.0,
+            ),
+            title: customText(text: 'Location: ', context: context),
+            subtitle: customText(text: shop.location, context: context),
+          ),
+        ),
+        Card(
+          child: ListTile(
+            leading: Image(
+              image: AssetImage('lib/assets/images/rupee.png'),
+              height: 35.0,
+              width: 35.0,
+            ),
+            title: customText(text: 'Rate: ', context: context),
+            subtitle: customText(text: shop.rate, context: context),
+          ),
         ),
       ],
     );
+
+    // return Row(
+    //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //   children: <Widget>[
+    //     Column(
+    //       crossAxisAlignment: CrossAxisAlignment.start,
+    //       children: <Widget>[
+    //         Row(
+    //           children: <Widget>[
+    //             Image(
+    //               image: AssetImage('lib/assets/images/wall-clock.png'),
+    //               height: 20.0,
+    //               width: 20.0,
+    //             ),
+    //             customText(text: 'Time: ', context: context),
+    //           ],
+    //         ),
+    //         Row(
+    //           children: <Widget>[
+    //             Image(
+    //               image: AssetImage('lib/assets/images/rupee.png'),
+    //               height: 20.0,
+    //               width: 20.0,
+    //             ),
+    //             customText(text: 'Rate: ', context: context),
+    //           ],
+    //         ),
+    //         Row(
+    //           children: <Widget>[
+    //             Image(
+    //               image: AssetImage('lib/assets/images/pin.png'),
+    //               height: 20.0,
+    //               width: 20.0,
+    //             ),
+    //             customText(text: 'Location: ', context: context),
+    //           ],
+    //         ),
+    //       ],
+    //     ),
+    //     Column(
+    //       crossAxisAlignment: CrossAxisAlignment.start,
+    //       children: <Widget>[
+    //         customText(text: shop.time, context: context),
+    //         customText(text: shop.rate, context: context),
+    //         customText(text: shop.location, context: context),
+    //       ],
+    //     ),
+    //   ],
+    // );
   }
 }
 
