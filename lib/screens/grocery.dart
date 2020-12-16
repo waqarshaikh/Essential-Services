@@ -14,23 +14,23 @@ class Grocery extends StatefulWidget {
 class _GroceryState extends State<Grocery> {
   List<Item> _items = <Item>[
     Item(
-        headerValue: 'Shop 1 (Location)',
+        headerValue: 'Vishwas Bazar (New Panvel)',
         shop: Shop(
-            location: 'Uran Market',
-            rate: 'Rs. 100',
-            time: '10:00 PM to 7:00 PM')),
+            location: 'Shop No.5/6, Cidco Complex, Sector 1',
+            phone: "022 2745 1247",
+            time: '9:00 PM to 9:00 PM')),
     Item(
-        headerValue: 'Shop 2 (Location)',
+        headerValue: 'Shivam Super Market (Karanjade)',
         shop: Shop(
-            location: 'Uran Market',
-            rate: 'Rs. 200',
-            time: '10:00 PM to 7:00 PM')),
+            location: 'Shop No. 1, 2 & 3, Shiv Shraddha CHS, Plot no 50, Sector 5, 410206',
+            phone: "099206 38112",
+            time: '8:00 PM to 10:00 PM')),
     Item(
-        headerValue: 'Shop 3 (Location)',
+        headerValue: 'Food Market (Khanda Colony)',
         shop: Shop(
-            location: 'Uran Market',
-            rate: 'Rs. 150',
-            time: '10:00 PM to 7:00 PM')),
+            location: 'Shop No - 14,15,16 , Sai Sharan, Citi Park Rd, Sector - 8',
+            phone: "099200 84249",
+            time: '10:00 PM to 10:00 PM')),
   ];
 
   @override

@@ -1,7 +1,6 @@
 import 'package:essential_services/screens/fire_and_safety.dart';
 import 'package:essential_services/screens/restaurant.dart';
 import 'package:essential_services/screens/water_supply.dart';
-
 import 'screens/chicken.dart';
 import 'screens/hospital.dart';
 import 'screens/medical.dart';
@@ -83,7 +82,7 @@ class _HomeState extends State<Home> {
                           size: 30.0,
                           color: Colors.red,
                         ),
-                        Text("Uran", style: TextStyle(fontSize: 20.0)),
+                        Text("Panvel", style: TextStyle(fontSize: 20.0)),
                       ],
                     ),
                   ),
@@ -92,7 +91,7 @@ class _HomeState extends State<Home> {
                       padding: EdgeInsets.only(left: 10.0, top: 5.0),
                       child: Text("Essential Services",
                           style: TextStyle(
-                            fontSize: 35.0,
+                            fontSize: 30.0,
                             fontWeight: FontWeight.w700,
                             foreground: Paint()..shader = linearGradient,
                           )),

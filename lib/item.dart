@@ -34,17 +34,32 @@ class Item {
             subtitle: customText(text: shop.location, context: context),
           ),
         ),
+        // Card(
+        //   child: ListTile(
+        //     leading: Image(
+        //       image: AssetImage('lib/assets/images/rupee.png'),
+        //       height: 35.0,
+        //       width: 35.0,
+        //     ),
+        //     title: customText(text: 'Rate: ', context: context),
+        //     subtitle: customText(text: shop.rate, context: context),
+        //   ),
+        // ),
         Card(
           child: ListTile(
             leading: Image(
-              image: AssetImage('lib/assets/images/rupee.png'),
+              image: AssetImage('lib/assets/images/phone-call.png'),
               height: 35.0,
               width: 35.0,
             ),
-            title: customText(text: 'Rate: ', context: context),
-            subtitle: customText(text: shop.rate, context: context),
+            title: customText(text: 'Phone: ', context: context),
+            subtitle: customText(text: shop.phone, context: context),
           ),
         ),
+        Center(
+          child: MaterialButton(onPressed: () {}, color: Colors.blue,child: Text('More info',style: TextStyle(color: Colors.white),),),
+        ),
+        SizedBox(height: 10.0,),
       ],
     );
 

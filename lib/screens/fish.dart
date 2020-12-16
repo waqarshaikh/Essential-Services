@@ -17,19 +17,19 @@ class _FishState extends State<Fish> {
         headerValue: 'Shop 1 (Location)',
         shop: Shop(
             location: 'Uran Market',
-            rate: 'Rs. 100',
+            phone: "096658 88599",
             time: '10:00 PM to 7:00 PM')),
     Item(
         headerValue: 'Shop 2 (Location)',
         shop: Shop(
             location: 'Uran Market',
-            rate: 'Rs. 200',
+            phone: "096658 88599",
             time: '10:00 PM to 7:00 PM')),
     Item(
         headerValue: 'Shop 3 (Location)',
         shop: Shop(
             location: 'Uran Market',
-            rate: 'Rs. 150',
+            phone: "096658 88599",
             time: '10:00 PM to 7:00 PM')),
   ];
 

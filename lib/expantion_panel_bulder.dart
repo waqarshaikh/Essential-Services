@@ -12,11 +12,11 @@ class ExpantionPanelBuilder {
         headerBuilder: (BuildContext context, bool isExpanded) {
           headerColor = isExpanded ? Colors.blue : Colors.black;
           return Container(
-            padding: EdgeInsets.only(top: 8.0),
+            padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0),
             child: Text(
               item.headerValue,
               style: TextStyle(
-                fontSize: 30.0,
+                fontSize: 25.0,
                 color: headerColor,
               ),
               textAlign: TextAlign.center,
