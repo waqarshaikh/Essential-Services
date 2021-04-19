@@ -30,6 +30,8 @@ class _HomeState extends State<Home> {
     "Dummy"
   ];
 
+  var locations = ['Panvel', 'Uran', 'Belapur', 'Vashi'];
+  String dropdownValue = 'Panvel';
   var images = [
     'lib/assets/images/chicken.png',
     'lib/assets/images/hospital.png',
@@ -69,23 +71,55 @@ class _HomeState extends State<Home> {
         right: false,
         bottom: false,
         child: Column(
+
           children: <Widget>[
             Container(
+              margin: EdgeInsets.only(left: 10.0),
               child: Row(
                 children: <Widget>[
-                  FlatButton(
-                    onPressed: () {},
-                    child: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.location_on,
-                          size: 30.0,
-                          color: Colors.red,
-                        ),
-                        Text("Panvel", style: TextStyle(fontSize: 20.0)),
-                      ],
+                  DropdownButton(
+                    value: dropdownValue,
+                    icon: Icon(
+                      Icons.location_on,
+                      color: Colors.red,
+                      size: 30.0,
                     ),
+                    items: locations
+                        .map<DropdownMenuItem<String>>((String value) =>
+                            DropdownMenuItem<String>(
+                              value: value,
+                              child:
+                                  Text(value, style: TextStyle(fontSize: 20.0)),
+                            ))
+                        .toList(),
+                    onChanged: (String newValue) {
+                      setState(() {
+                        dropdownValue = newValue;
+                      });
+                    },
                   ),
+                  // PopupMenuButton(
+                  //   itemBuilder: (BuildContext context) {
+                  //     locations.map((location) => PopupMenuItem(
+                  //           child: Text(location),
+                  //         ));
+                  //     return List.generate(5, (index) {
+                  //       return PopupMenuItem(
+                  //         child: Text('button no $index'),
+                  //       );
+                  //     });
+                  //   },
+                  //   child: Row(
+                  //     children: <Widget>[
+                  //       Icon(
+                  //         Icons.location_on,
+                  //         size: 30.0,
+                  //         color: Colors.red,
+                  //       ),
+                  //       Text("Panvel", style: TextStyle(fontSize: 20.0)),
+                  //     ],
+                  //   ),
+                  // ),
                   Expanded(
                     child: Padding(
                       padding: EdgeInsets.only(left: 10.0, top: 5.0),
@@ -117,10 +151,10 @@ class _HomeState extends State<Home> {
                           onTap: () {
                             switch (index) {
                               case 0:
-                                navigator(Chicken(), context);
+                                navigator(Chicken(dropdownValue: this.dropdownValue,), context);
                                 break;
                               case 1:
-                                navigator(Hospital(), context);
+                                navigator(Hospital(dropdownValue: this.dropdownValue,), context);
                                 break;
                               case 2:
                                 navigator(Milk(), context);
