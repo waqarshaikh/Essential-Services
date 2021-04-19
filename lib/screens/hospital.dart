@@ -182,32 +182,32 @@ class _HospitalState extends State<Hospital> {
             time: '7:00 AM to 10:00 PM',
             phone: "092241 56451")),
     Item(
-        headerValue: "Sajid Chicken Shop (Kamothe)",
+        headerValue: "Alex Hospital (Sector 12)",
         shop: Shop(
             location: "Dwaraka Arcade, Plot No.158, Sector 14, Sector 12",
             time: '8:00 AM to 10:00 PM',
             phone: "090220 24982")),
     Item(
-        headerValue: "Sunny Egg And Chicken Shop (Old Panvel)",
+        headerValue: "JM Hospital (Sector 1)",
         shop: Shop(
             location: "Uran Naka, Uran Rd",
             time: '10:00 AM to 10:00 PM',
             phone: "098206 69674")),
     Item(
-        headerValue: "P.Kars Chicken Shop (Kamothe)",
+        headerValue: "H. G. Hospital (Sector 12)",
         shop: Shop(
             location:
                 "Shop No 4 Siddheshwar CHS Plot No 3 Navi Mumbai, Sector 12",
             time: '8:00 AM to 10:00 PM',
             phone: "022 6573 0222")),
     Item(
-        headerValue: "Vaikar Chicken Centre (Old Panvel)",
+        headerValue: "Luckky Hospital (Sector 9)",
         shop: Shop(
             location: "Shivaji Rd, Old Panvel",
             time: '8:00 AM to 10:00 PM',
             phone: "092243 27891")),
     Item(
-        headerValue: "Ekvira Chicken Centre (New Panvel East)",
+        headerValue: "Simita Hospital (Sector 15)",
         shop: Shop(
             location:
                 '97, Panvel Matheran Rd Yamuna Kunj, Panvel Matheran Rd, Yamuna Kunj, Sector-10',
@@ -249,32 +249,32 @@ class _HospitalState extends State<Hospital> {
             time: '7:00 AM to 10:00 PM',
             phone: "092241 56451")),
     Item(
-        headerValue: "Sajid Chicken Shop (Kamothe)",
+        headerValue: "Sajid Chicken Shop (Sector 15)",
         shop: Shop(
             location: "Dwaraka Arcade, Plot No.158, Sector 14, Sector 12",
             time: '8:00 AM to 10:00 PM',
             phone: "090220 24982")),
     Item(
-        headerValue: "Sunny Egg And Chicken Shop (Old Panvel)",
+        headerValue: "K. L. Hostital (Sector 15)",
         shop: Shop(
             location: "Uran Naka, Uran Rd",
             time: '10:00 AM to 10:00 PM',
             phone: "098206 69674")),
     Item(
-        headerValue: "P.Kars Chicken Shop (Kamothe)",
+        headerValue: "Mhatre  Hostital (Sector 1)",
         shop: Shop(
             location:
                 "Shop No 4 Siddheshwar CHS Plot No 3 Navi Mumbai, Sector 12",
             time: '8:00 AM to 10:00 PM',
             phone: "022 6573 0222")),
     Item(
-        headerValue: "Vaikar Chicken Centre (Old Panvel)",
+        headerValue: "Rupesh Hostital (Sector 11)",
         shop: Shop(
             location: "Shivaji Rd, Old Panvel",
             time: '8:00 AM to 10:00 PM',
             phone: "092243 27891")),
     Item(
-        headerValue: "Ekvira Chicken Centre (New Panvel East)",
+        headerValue: "Ganesh Hostital (Sector 2)",
         shop: Shop(
             location:
                 '97, Panvel Matheran Rd Yamuna Kunj, Panvel Matheran Rd, Yamuna Kunj, Sector-10',
